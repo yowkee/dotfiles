@@ -1,0 +1,33 @@
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[push]
+  default = matching
+
+[http]
+#	proxy = http://10.x.x.x:8080
+
+[user]
+	name = yowkee
+	email = yowkee@gmail.com
+
+[alias]
+  # one line pretty log
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  co = checkout
+  ci = commit
+  ca = commit -a
+  a = add
+  m = commit --amend --verbose
+  d = diff
+  ds = diff --stat
+  dc = diff --cached
+  s = status -s
+
+  # list branches sorted by last modified
+  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+[color]
+  ui = auto
+
